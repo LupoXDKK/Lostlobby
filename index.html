@@ -2,7 +2,7 @@
 <html lang="pt-BR">
 <head>
 <meta charset="UTF-8">
-<title>Arquivo_02</title>
+<title>Alma</title>
 
 <style>
 body {
@@ -47,25 +47,23 @@ button:hover {
 </head>
 <body>
 
-<h1>ARQUIVO ENCONTRADO</h1>
+<h1>ALMA</h1>
 
-<p>Isso foi tudo que restou.</p>
+<p>Lost Lobby 4</p>
 
 <!-- TROQUE A IMAGEM AQUI -->
-<img src="imagem.jpg" alt="arquivo">
+<img src="Alma.png" alt="arquivo">
 
 <br><br>
 
-<input type="password" id="senha" placeholder="Digite a senha">
+<input type="text" id="senha" placeholder="Digite a senha">
 <button onclick="verificarSenha()">ACESSAR</button>
 
-<p id="erro" class="hidden">Senha incorreta.</p>
+<p id="erro" class="hidden">incorreto.</p>
 
 <div id="conteudoSecreto" class="hidden">
     <h2>Acesso liberado</h2>
-    <p>Você está mais perto do que deveria.</p>
-    <a href="proxima-pista.html">Continuar</a>
-</div>
+    <p>Continue. Nos liberte.</p>
 
 <!-- dica escondida -->
 <!-- talvez a resposta esteja invertida -->
@@ -74,7 +72,7 @@ button:hover {
 function verificarSenha() {
     var senha = document.getElementById("senha").value;
 
-    if(senha === "orfeu") {
+    if(senha === "eles me querem dentro mike") {
         document.getElementById("conteudoSecreto").style.display = "block";
         document.getElementById("erro").style.display = "none";
     } else {
