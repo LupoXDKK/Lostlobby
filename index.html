@@ -2,7 +2,7 @@
 <html lang="pt-BR">
 <head>
 <meta charset="UTF-8">
-<title>Arquivo_01</title>
+<title>Arquivo_02</title>
 
 <style>
 body {
@@ -13,63 +13,73 @@ body {
     padding: 50px;
 }
 
-h1 {
-    font-size: 40px;
+img {
+    max-width: 80%;
+    border: 1px solid #00ff9f;
     margin-bottom: 20px;
 }
 
-p {
-    font-size: 18px;
-}
-
-a {
+input {
+    padding: 10px;
+    background: black;
+    border: 1px solid #00ff9f;
     color: #00ff9f;
-    text-decoration: none;
 }
 
-a:hover {
-    text-decoration: underline;
+button {
+    padding: 10px;
+    background: black;
+    border: 1px solid #00ff9f;
+    color: #00ff9f;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #003322;
 }
 
 .hidden {
     display: none;
 }
 
-.box {
-    border: 1px solid #00ff9f;
-    padding: 20px;
-    margin-top: 30px;
-}
 </style>
 
 </head>
 <body>
 
-<h1>ARQUIVO RESTRITO</h1>
+<h1>ARQUIVO ENCONTRADO</h1>
 
-<p>Se você está vendo isso... algo deu errado.</p>
+<p>Isso foi tudo que restou.</p>
 
-<div class="box">
-    <p>Data: 17/09/2008</p>
-    <p>Status: INCOMPLETO</p>
+<!-- TROQUE A IMAGEM AQUI -->
+<img src="imagem.jpg" alt="arquivo">
+
+<br><br>
+
+<input type="password" id="senha" placeholder="Digite a senha">
+<button onclick="verificarSenha()">ACESSAR</button>
+
+<p id="erro" class="hidden">Senha incorreta.</p>
+
+<div id="conteudoSecreto" class="hidden">
+    <h2>Acesso liberado</h2>
+    <p>Você está mais perto do que deveria.</p>
+    <a href="proxima-pista.html">Continuar</a>
 </div>
 
-<br>
-
-<a href="#" onclick="mostrarMensagem()">[ ACESSAR LOG ]</a>
-
-<div id="mensagem" class="hidden">
-    <p>...</p>
-    <p>Eles não deveriam lembrar.</p>
-    <p>Mas você encontrou.</p>
-</div>
-
-<!-- PISTA ESCONDIDA NO CÓDIGO -->
-<!-- senha: orfeu_17 -->
+<!-- dica escondida -->
+<!-- talvez a resposta esteja invertida -->
 
 <script>
-function mostrarMensagem() {
-    document.getElementById("mensagem").style.display = "block";
+function verificarSenha() {
+    var senha = document.getElementById("senha").value;
+
+    if(senha === "orfeu") {
+        document.getElementById("conteudoSecreto").style.display = "block";
+        document.getElementById("erro").style.display = "none";
+    } else {
+        document.getElementById("erro").style.display = "block";
+    }
 }
 </script>
 
