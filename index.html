@@ -42,6 +42,19 @@ button:hover {
     display: none;
 }
 
+/* Tela final */
+#telaFinal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: black;
+    color: #00ff9f;
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
 </style>
 
 </head>
@@ -51,7 +64,6 @@ button:hover {
 
 <p>Lost Lobby 4</p>
 
-<!-- TROQUE A IMAGEM AQUI -->
 <img src="Alma.png" alt="arquivo">
 
 <br><br>
@@ -64,6 +76,12 @@ button:hover {
 <div id="conteudoSecreto" class="hidden">
     <h2>Acesso liberado</h2>
     <p>Continue. Nos liberte.</p>
+</div>
+
+<!-- Tela final -->
+<div id="telaFinal">
+    <h1 style="font-size:80px;">Até mais...</h1>
+</div>
 
 <!-- dica escondida -->
 <!-- talvez a resposta esteja invertida -->
@@ -73,8 +91,7 @@ function verificarSenha() {
     var senha = document.getElementById("senha").value;
 
     if(senha === "eles me querem dentro mike") {
-        document.getElementById("conteudoSecreto").style.display = "block";
-        document.getElementById("erro").style.display = "none";
+        document.getElementById("telaFinal").style.display = "flex";
     } else {
         document.getElementById("erro").style.display = "block";
     }
